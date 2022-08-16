@@ -1,0 +1,16 @@
+{
+  "name": "ccview-base-ui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node src/index.js",
+    "dev": "vite"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ccview-utils": "workspace:^1.0.0",
+    "vue": "^3.2.37"
+  }
+}
