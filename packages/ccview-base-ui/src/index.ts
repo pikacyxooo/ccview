@@ -1,3 +1,8 @@
-import { add } from 'ccview-utils';
 
-console.log(add(1,2))
+import Collapse from "./collapse";
+import CollapseItem from "./collapse-item";
+
+export {
+    Collapse,
+    CollapseItem
+}
