@@ -1,14 +1,18 @@
-import { defineComponent } from "vue";
+import { defineComponent, ref, reactive, watch } from "vue";
 import { Collapse, CollapseItem } from "../../src";
 
 export default defineComponent({
+   
     setup() {
-        return () => <>
-            <Collapse>
-                <CollapseItem>yoyo1</CollapseItem>
-                <CollapseItem>yoyo2</CollapseItem>
-                <CollapseItem>yoyo3</CollapseItem>
+        const activeNames = ref(['1']);
+        const list = ref(['aaa', 'bbb', 'ccc'])
+        return () => 
+            <Collapse v-model={activeNames.value}>
+                {
+                    list.value.forEach(item => {
+                        <CollapseItem>{item}</CollapseItem>        
+                    })
+                }
             </Collapse>
-        </>
     }
 })
